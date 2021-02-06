@@ -1,0 +1,22 @@
+unmailboxes *
+set folder = "imaps://aeson@witchywonders.ca@mail.witchywonders.ca:993"
+set smtp_url = "smtps://aeson@witchywonders.ca@mail.witchywonders.ca:465"
+set smtp_pass = "Rpi@llap008"
+set imap_pass = "Rpi@llap008"
+set from = "aeson@witchywonders.ca"
+set realname = "Aeson"
+set spoolfile = "+INBOX"
+set record = "+INBOX/Sent"
+set trash = "+INBOX/Deleted Items"
+set postponed = "+INBOX/Drafts"
+
+set sort = reverse-threads
+set sort_aux = last-date-received
+
+mailboxes ='INBOX'
+mailboxes ='INBOX/Sent' 
+mailboxes ='INBOX/Deleted Items'
+mailboxes ='INBOX/Drafts'
+mailboxes ='INBOX/Junk'
+
+account-hook Aeson "set imap_user='aeson@witchywonders.ca' imap_pass='Rpi@llap008'"
