@@ -1,0 +1,14 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=11064299-01  /boot           vfat    defaults          0       2
+PARTUUID=11064299-02  /               ext4    defaults,noatime  0       1
+//192.168.0.200/Pictures /mnt/Pictures cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/Books /mnt/Books cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/GoogleDrive /mnt/GoogleDrive cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/MyAudio /mnt/MyAudio cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/OneDrive /mnt/OneDrive cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/Backups /mnt/Backups cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/Software /mnt/Software cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+//192.168.0.200/iso /mnt/iso cifs credentials=/etc/win-credentials,file_mode=0777,dir_mode=0777 0 0
+
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
