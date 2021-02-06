@@ -1,8 +1,8 @@
 unmailboxes *
 set folder = "imaps://aeson@witchywonders.ca@mail.witchywonders.ca:993"
 set smtp_url = "smtps://aeson@witchywonders.ca@mail.witchywonders.ca:465"
-set smtp_pass = "Rpi@llap008"
-set imap_pass = "Rpi@llap008"
+set smtp_pass = "*****"
+set imap_pass = "*****"
 set from = "aeson@witchywonders.ca"
 set realname = "Aeson"
 set spoolfile = "+INBOX"
@@ -19,4 +19,4 @@ mailboxes ='INBOX/Deleted Items'
 mailboxes ='INBOX/Drafts'
 mailboxes ='INBOX/Junk'
 
-account-hook Aeson "set imap_user='aeson@witchywonders.ca' imap_pass='Rpi@llap008'"
+account-hook Aeson "set imap_user='aeson@witchywonders.ca' imap_pass='*****'"
