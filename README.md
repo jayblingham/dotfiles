@@ -1,5 +1,5 @@
 # dotfiles
-These are my dotfiles, backed up with stow and uploaded to GitHub.
+These are my dotfiles that I've linked using stow, and uploaded to GitHub.
 
 I've added these here mostly for my own ease of use, but feel free to copy and use them if they are useful to you.
 
