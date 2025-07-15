@@ -8,19 +8,28 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+	"custom/separator",
         "hyprland/workspaces",
+	"custom/separator",
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
       //  "mpd",
+	"custom/separator",
         "custom/notification",
+	"custom/separator",
 	"idle_inhibitor",
+	"custom/separator",
         "pulseaudio",
+	"custom/separator",
         "network",
+	"custom/separator",
         "power-profiles-daemon",
+	"custom/separator",
         "cpu",
+	"custom/separator",
         "memory",
       //  "temperature",
       //  "backlight",
@@ -28,8 +37,11 @@
       //  "hyprland/language",
       //  "battery",
       //  "battery#bat2",
+	"custom/separator",
 	"clock",
+	"custom/separator",
         "tray",
+	"custom/separator",
         "custom/power"
     ],
     // Modules configuration
@@ -61,39 +73,45 @@
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "hyprland/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
+    "custom/separator": {
+	"format": "|",
+	"interval":"once",
+	"tooltip": false
     },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-	"format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
+
+   // "hyprland/scratchpad": {
+   //     "format": "{icon} {count}",
+   //     "show-empty": false,
+   //     "format-icons": ["", ""],
+   //     "tooltip": true,
+   //     "tooltip-format": "{app}: {title}"
+   // },
+   // "mpd": {
+   //     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+   //	"format-disconnected": "Disconnected ",
+   //     "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+   //     "unknown-tag": "N/A",
+   //     "interval": 5,
+   //     "consume-icons": {
+   //         "on": " "
+   //     },
+   //     "random-icons": {
+   //         "off": "<span color=\"#f53c3c\"></span> ",
+   //         "on": " "
+   //     },
+   //     "repeat-icons": {
+   //         "on": " "
+   //     },
+   //    "single-icons": {
+   //         "on": "1 "
+   //     },
+   //     "state-icons": {
+   //         "paused": "",
+   //         "playing": ""
+   //     },
+   //     "tooltip-format": "MPD (connected)",
+   //     "tooltip-format-disconnected": "MPD (disconnected)"
+   // },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -129,29 +147,29 @@
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["🔅", "🔆"]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
+   // "backlight": {
+   //     // "device": "acpi_video1",
+   //     "format": "{percent}% {icon}",
+   //     "format-icons": ["🔅", "🔆"]
+   // },
+   // "battery": {
+   //     "states": {
+   //         // "good": 95,
+   //         "warning": 30,
+   //         "critical": 15
+   //     },
+   //     "format": "{capacity}% {icon}",
+   //     "format-full": "{capacity}% {icon}",
+   //     "format-charging": "{capacity}% ",
+   //     "format-plugged": "{capacity}% ",
+   //     "format-alt": "{time} {icon}",
+   //     // "format-good": "", // An empty format will hide the module
+   //     // "format-full": "",
+   //     "format-icons": ["", "", "", "", ""]
+   // },
+   // "battery#bat2": {
+   //     "bat": "BAT2"
+   // },
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
