@@ -1,3 +1,4 @@
 git add .
-git commit -m "Adding new files to backup"
+read -p "Enter commit message: " commitMsg
+git commit -m "$commitMsg"
 git push -u origin main
