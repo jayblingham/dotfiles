@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-family: 'JetBrainsMono NFM SemiBold', FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
 }
 
 window#waybar {
@@ -119,7 +119,7 @@ button:hover {
 
 #clock {
 /*    background-color: #64727D; */
-    padding-top: 3px;
+/*    padding-top: 3px;*/
 }
 
 #battery {
