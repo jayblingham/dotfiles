@@ -1,0 +1,105 @@
+============================================
+Jay's Notes for Configuring Arch & Hyprland
+============================================
+-----------
+Install YAY
+-----------
+sudo pacman -Syu
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay --version
+
+-------------------
+Software to Install
+-------------------
+hyprland (during install)
+ly (during install)
+kitty (during install)
+hypridle
+hyprlock
+hyprpaper
+waybar
+swaync
+rofi
+hyprshot
+wttrbar
+nerd-fonts-noto-sans-mono
+ttf-font-awesome
+ttf-cascadia-code-nerd
+noto-fonts-emoji
+ttf-jetbrains-mono-nerd
+
+-------------------
+Dotfiles to Restore
+-------------------
+Copy ly config to /etc/ly
+Copy .bashrc to ~
+All in ~/.config/
+hypr/
+ - hypridle.conf
+ - hyprland.conf
+ - hyprlock.conf
+ - hyprpaper.conf
+kitty/
+ - kitty.conf
+rofi/
+ - config.rasi
+swaync/
+ - config.json
+ - style.css
+waybar/
+ - config.jsonc
+ - power_menu.xml
+ - style.css
+
+---------------------
+Update Montior Config
+---------------------
+hyprctl monitors
+Record monitor name
+Update ~/.config/hypr/hyprland.conf
+ie. monitor=eDP-1,1920x1080@144,0x0,1
+
+--------------------
+Update Waybar Config
+--------------------
+Update waybar weather config to point to correct CPU temp file
+ - Look around /sys/class/hwmon/hwmon#
+ - Check temp#_label to find CPU
+ - Update path to temp#_input file for CPU
+
+-------------------
+Additional Software
+-------------------
+onedrive-abraunegg
+onedrivegui
+discord
+libreoffice-fresh
+google-chrome
+microsoft-edge-stable-bin (for work)
+gimp
+vlc
+opendeck
+fastfetch (add to .bashrc -l linux)
+openrgb
+keepassxc
+steam
+thunderbird
+spotify
+gwenview
+bluez
+bluetooth-manager
+
+--------
+Git Push
+--------
+git add .
+git commit (enter message)
+git push origin main (Enter user and password)
+
+---------
+Git Clone
+---------
+git clone https://github.com/jayblingham/dotfiles.git
