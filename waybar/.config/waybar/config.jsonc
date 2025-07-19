@@ -32,7 +32,6 @@
         "power-profiles-daemon",
 	"custom/separator",
         "cpu",
-	"custom/separator",
         "memory",
       	"temperature",
       //  "backlight",
@@ -45,7 +44,8 @@
 	"custom/separator",
         "custom/notification",
 	"custom/separator",
-	"custom/power"
+	"custom/power",
+	"custom/separator"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -59,7 +59,7 @@
     //        "3": "",
     //        "4": "",
     //        "5": "",
-            "urgent": "",
+    //      "urgent": "",
             "active": "",
             "default": ""
         }

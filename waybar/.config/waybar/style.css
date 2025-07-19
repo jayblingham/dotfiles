@@ -96,6 +96,7 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #custom-weather,
+#custom-power,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -344,6 +345,9 @@ label:focus {
     font-family: "NotoSansMono Nerd Font";
 }
 #custom-separator {
-    color: #1B5E20;
+/*    color: #1B5E20;*/
+    color: #33CCFF;
     margin: 0 5px;
+}
+#custom-power {
 }
