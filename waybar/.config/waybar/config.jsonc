@@ -11,21 +11,24 @@
 	"custom/separator",
         "hyprland/workspaces",
 	"custom/separator",
+	"hyprland/window",
     ],
     "modules-center": [
-        "hyprland/window"
+	"custom/separator",
+	"clock",
+	"custom/separator",
+	"custom/weather",
+	"custom/separator"
     ],
     "modules-right": [
       //  "mpd",
-	"custom/separator",
-        "custom/notification",
 	"custom/separator",
 	"idle_inhibitor",
 	"custom/separator",
         "pulseaudio",
 	"custom/separator",
-        "network",
-	"custom/separator",
+      //  "network",
+      //  "custom/separator",
         "power-profiles-daemon",
 	"custom/separator",
         "cpu",
@@ -38,11 +41,11 @@
       //  "battery",
       //  "battery#bat2",
 	"custom/separator",
-	"clock",
-	"custom/separator",
         "tray",
 	"custom/separator",
-        "custom/power"
+        "custom/notification",
+	"custom/separator",
+	"custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -231,6 +234,13 @@
 			"shutdown": "shutdown -h now",
 			"reboot": "reboot",
 		}
+    },
+    "custom/weather": {
+	"format": "{}",
+	"tooltip": true,
+	"interval": 1800,
+	"exec": "wttrbar --date-format '%A, %d %b %Y' --location 'Newmarket, Ontario, Canada' --hide-conditions --observation-time",
+	"return-type": "json",
     },
     "custom/notification": {
                 "tooltip": false,
