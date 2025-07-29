@@ -65,10 +65,14 @@ ie. monitor=eDP-1,1920x1080@144,0x0,1
 --------------------
 Update Waybar Config
 --------------------
-Update waybar weather config to point to correct CPU temp file
+Update waybar temperature config to point to correct CPU temp file
  - Look around /sys/class/hwmon/hwmon#
  - Check temp#_label to find CPU
  - Update path to temp#_input file for CPU
+
+Update waybar weather config to point to corecct city
+ - Set to 'City, Province/State, Country'
+ - Needs single quotes
 
 -------------------
 Additional Software
@@ -91,6 +95,7 @@ spotify
 gwenview
 bluez
 bluetooth-manager
+webcamize
 
 --------
 Git Push

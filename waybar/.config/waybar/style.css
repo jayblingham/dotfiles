@@ -343,6 +343,7 @@ label:focus {
 #custom-notification {
 /*    background-color: #64727D;*/
     font-family: "NotoSansMono Nerd Font";
+    padding-right: 5px;
 }
 #custom-separator {
 /*    color: #1B5E20;*/
