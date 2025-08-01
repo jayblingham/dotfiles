@@ -26,10 +26,11 @@ rofi
 hyprshot
 wttrbar
 nerd-fonts-noto-sans-mono
-ttf-font-awesome
+ttf-font-awesome (woff2-font-awesome)
 ttf-cascadia-code-nerd
 noto-fonts-emoji
 ttf-jetbrains-mono-nerd
+pavucontrol
 
 -------------------
 Dotfiles to Restore
