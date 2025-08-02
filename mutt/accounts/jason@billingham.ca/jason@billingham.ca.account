@@ -1,0 +1,22 @@
+unmailboxes *
+set folder = "imaps://jason@billingham.ca@mail.billingham.ca:993"
+set smtp_url = "smtps://jason@billingham.ca@mail.billingham.ca:465"
+set smtp_pass = "*****"
+set imap_pass = "*****"
+set from = "jason@billingham.ca"
+set realname = "Jason Billingham"
+set spoolfile = "+INBOX"
+set record = "+INBOX/Sent"
+set trash = "+INBOX/Deleted Items"
+set postponed = "+INBOX/Drafts"
+
+set sort = reverse-threads
+set sort_aux = last-date-received
+
+mailboxes ='INBOX'
+mailboxes ='INBOX/Sent' 
+mailboxes ='INBOX/Deleted Items'
+mailboxes ='INBOX/Drafts'
+mailboxes ='INBOX/Junk'
+
+account-hook Billingham "set imap_user='jason@billingham.ca' imap_pass='*****'"

@@ -1,0 +1,3 @@
+text/html; /usr/bin/google-chrome-stable %s & sleep 1; test=test -n "$DISPLAY"; nametemplate=%s.html; needsterminal
+image/*; gwenview %s ;
+application/pdf; zathura %s;

@@ -1,0 +1,43 @@
+set sidebar_visible = yes
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_short_path = yes
+set mail_check_stats
+set date_format = "%m/%d %I:%M"
+set index_format = "%2C %Z %d %-15.15F %s (%-4.4c)"
+set editor="nvim"
+set fast_reply
+set reverse_name
+set reverse_realname=yes
+set include
+set count_alternatives=yes
+set allow_ansi
+set pager_stop
+set smart_wrap
+set wrap = 90
+
+auto_view application/ics
+auto_view text/calendar
+auto_view text/plain
+auto_view text/html
+auto_view application/pgp-encrypted
+alternative_order text/calendar application/ics text/plain text/enriched text/html
+
+set mailcap_path = ~/.config/mutt/mailcap
+
+source colour.muttrc
+
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+bind index,pager B sidebar-toggle-visible
+set sidebar_width = 25
+set sidebar_divider_char = '|'
+
+source ~/.config/mutt/accounts/jason@billingham.ca/jason@billingham.ca.account
+folder-hook Billingham 'source ~/.config/mutt/accounts/jason@billingham.ca/jason@billingham.ca.account'
+
+macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/jason@billingham.ca/jason@billingham.ca.account<enter><change-folder>!<enter>'
+
+bind index G imap-fetch-mail
+
+macro index,pager \cb <pipe-entry>'urlscan'<enter> 'Follow links with urlview'
