@@ -97,6 +97,7 @@ gwenview
 bluez
 bluetooth-manager
 webcamize
+power-profiles-daemon
 
 --------
 Git Push
