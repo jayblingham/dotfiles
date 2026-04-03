@@ -19,10 +19,10 @@ configs=("hypr" "kitty" "nvim" "rofi" "kate" "swaync" "waybar")
 
 for folder in "${configs[@]}"; do
     if [ -d "$basedir/$folder" ]; then
-        cp -R "$basedir/$folder" "$dotfiles_location/"
-        echo "Backed up $folder"
-    else
-        echo "Warning: $basedir/$folder not found, skipping."
+        # --delete ensures your backup matches your actual config exactly
+        # -a (archive) preserves permissions and timestamps
+        rsync -a --delete "$basedir/$folder/" "$dotfiles_location/$folder/"
+        echo "Successfully synced $folder"
     fi
 done
 
