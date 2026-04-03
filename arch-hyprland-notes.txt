@@ -31,6 +31,27 @@ ttf-cascadia-code-nerd
 noto-fonts-emoji
 ttf-jetbrains-mono-nerd
 pavucontrol
+onedrive-abraunegg
+onedrivegui
+discord
+libreoffice-fresh
+google-chrome
+microsoft-edge-stable-bin (for work)
+gimp
+vlc
+opendeck
+fastfetch (add to .bashrc -l linux)
+openrgb
+keepassxc
+steam
+thunderbird
+spotify
+gwenview
+bluez
+bluetooth-manager
+webcamize
+power-profiles-daemon
+rsync
 
 -------------------
 Dotfiles to Restore
@@ -74,30 +95,6 @@ Update waybar temperature config to point to correct CPU temp file
 Update waybar weather config to point to corecct city
  - Set to 'City, Province/State, Country'
  - Needs single quotes
-
--------------------
-Additional Software
--------------------
-onedrive-abraunegg
-onedrivegui
-discord
-libreoffice-fresh
-google-chrome
-microsoft-edge-stable-bin (for work)
-gimp
-vlc
-opendeck
-fastfetch (add to .bashrc -l linux)
-openrgb
-keepassxc
-steam
-thunderbird
-spotify
-gwenview
-bluez
-bluetooth-manager
-webcamize
-power-profiles-daemon
 
 --------
 Git Push
