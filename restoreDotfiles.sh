@@ -4,7 +4,7 @@ dotfiles_location="$HOME/dotfiles"
 basedir="$HOME/.config"
 
 # 1. Update the local repository first
-git clone https://github.com/jayblingham/dotfiles.git
+# git clone https://github.com/jayblingham/dotfiles.git
 
 # 2. Restore bashrc
 cp "$dotfiles_location/bashrc/.bashrc" "$HOME/.bashrc"
