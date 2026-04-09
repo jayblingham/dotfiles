@@ -18,7 +18,7 @@ These files were created on an Arch Linux system running Hyprland. In order to e
 
 If you want to install these on an Arch/Hyprland system, you can must first use the **installSoftware.sh** script.
 
-### This will perform the following actions:
+#### This will perform the following actions:
 
 1. Update your system using **pacman -Syu**
 2. Install required development packages: **git and base-devel**
