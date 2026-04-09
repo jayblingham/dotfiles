@@ -67,7 +67,16 @@ Once you've completed those steps, reboot to ensure that your monitors are worki
 
 #### Troubleshooting Waybar Plugins
 
-**Coming Soon**
+* Update Waybar Temperature config to point to correct CPU temp file
+    ....* Go to **/sys/class/hwmin/hwmon#**
+    ....* Check temp#_label to find CPU or CPU package.
+    ....* Find the temp#_input file associated with the CPU label.
+    ....* Update the path in **~/.config/waybar/config.jsonc**
+
+* Update Waybar Weather config to point to correct city
+    ....* Update **~/.config/waybar/config.jsonc**
+    ....* Change the city information using the format **'City, Province/State, Country'
+    ....* The single quotes are required.
 
 ### Other Distributions
 
