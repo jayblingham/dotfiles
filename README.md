@@ -12,7 +12,7 @@ Use these files at your own risk.
 
 ## Prerequisites:
 
-These files were created on an Arch Linux system running Hyprland. In order to ensure that everything works, I recommend the same configuration.
+These files were created on an Arch Linux system running Hyprland. In order to ensure that everything works, I recommend starting here to review or use my [Arch with Hyprland Installation Guide](ARCHINSTALL.md)
 
 ## Installation
 
