@@ -1,4 +1,4 @@
-# Jay's Notes for Installing Arch Linux
+# Arch with Hyprland Installation Guide
 
 This quick guide will explain how I install Arch.  This is by no means a comprehensive guide, but instead what works for me.
 
