@@ -14,17 +14,32 @@ Use these files at your own risk.
 
 These files were created on an Arch Linux system running Hyprland. In order to ensure that everything works, I recommend starting here to review or use my [Arch with Hyprland Installation Guide](ARCHINSTALL.md)
 
+## Install git and clone the repo
+
+You will first need to install git and clone my dotfiles repo.  This will download all the files you need to successfully use this configuration.
+
+    ```
+    sudo pacman -S --needed git --noconfirm
+    ```
+Once git is installed, you can clone the repo using the following commands.
+
+    ```
+    cd ~
+    git clone http://github.com/jayblingham/dotfiles.git
+    ```
+You are now ready to contiue with the installation.
+
 ## Installation
 
-If you want to install these on an Arch/Hyprland system, you can must first use the **installSoftware.sh** script.
+If you want to install these on an Arch/Hyprland system, you can must first use the **installSoftware.sh** script located in the **~/dotfiles/** directory.
 
 #### This will perform the following actions:
 
 1. Update your system using **pacman -Syu**
-2. Install required development packages: **git and base-devel**
+2. Install required development packages: **base-devel**
 3. Install YAY from AUR if not already installed.
 4. Install required software.
-5. Ask you about optional software, and install.
+5. Ask you about optional software. (In order to ensure my config works for you, choose **YES** for **Google-Chrome**)
 
 Once the software has successfully installed, run the **restoreDotfiles.sh** script.  This will first backup your existing configuration files into **~/dotfiles/backup/**, and then copy the new configuration files to the appropriate directory.
 
