@@ -26,7 +26,7 @@ If you want to install these on an Arch/Hyprland system, you can must first use 
 4. Install required software.
 5. Ask you about optional software, and install.
 
-Once the software has successfully installed, run the **restoreDotfiles.sh** script.  This will copy the configuration files to the appropriate configuration.
+Once the software has successfully installed, run the **restoreDotfiles.sh** script.  This will first backup your existing configuration files into **~/dotfiles/backup/**, and then copy the new configuration files to the appropriate directory.
 
 ** DO NOT REBOOT **
 
