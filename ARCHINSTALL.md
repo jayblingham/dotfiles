@@ -52,59 +52,59 @@ Let's dive into how *I* configure Arch.
 ### Arch Configuration
 
 * Archinstall language
-    ....* I leave this set to English
+    * I leave this set to English
 
 * Locales
-    ....* Even though I'm in Canada, I still leave this as us for simplicity.
+    * Even though I'm in Canada, I still leave this as us for simplicity.
 
 * Mirrors and repositories
-    ....* First, I change my region to **Canada** to update the mirror lists.
-    ....* Next I go into **Optional repositores** and enable **multilib**.
+    * First, I change my region to **Canada** to update the mirror lists.
+    * Next I go into **Optional repositores** and enable **multilib**.
 
 * Disk configuration
-    ....* If you have a single disk, or are not familiar with Linux disk partitioning, I would suggest choosing the option to **Use a best-effort default partition layout**.
-    ....* Select the disk that you want to use as your primary disk for Arch (be careful not to select your USB drive).
-    ....* You can choose whatever filesystem you like, but if you're unsure choose ext4.
-    ....* For the purposes of this guide, we'll say **No** to the question about using a separate /home partition.
-    ....* There are options in here for Disk encryption, which I typically use, but I will let you explore that for yourself.  It is not required, and not in scope of this tutorial.
+    * If you have a single disk, or are not familiar with Linux disk partitioning, I would suggest choosing the option to **Use a best-effort default partition layout**.
+    * Select the disk that you want to use as your primary disk for Arch (be careful not to select your USB drive).
+    * You can choose whatever filesystem you like, but if you're unsure choose ext4.
+    * For the purposes of this guide, we'll say **No** to the question about using a separate /home partition.
+    * There are options in here for Disk encryption, which I typically use, but I will let you explore that for yourself.  It is not required, and not in scope of this tutorial.
 
 * Swap
-    ....* No change.
+    * No change.
 
 * Bootloader
-    ....* No change.
+    * No change.
 
 * Kernels
-    ....* No change.
+    * No change.
 
 * Hostname
-    ....* Change the hostname to whatever you want it to be.  This will be your computer name on the network, and will show up in your bash prompt.
+    * Change the hostname to whatever you want it to be.  This will be your computer name on the network, and will show up in your bash prompt.
 
 * Authentication
-    ....* Change the **Root password** to something secure that you'll remember.
-    ....* Under **User account**, **add a user**, give it a name and a password, and when asked if it should be a **superuser (sudo)** choose **yes**.
-    ....* Create as many users as you'll need, and then choose **Confirm and exit**
+    * Change the **Root password** to something secure that you'll remember.
+    * Under **User account**, **add a user**, give it a name and a password, and when asked if it should be a **superuser (sudo)** choose **yes**.
+    * Create as many users as you'll need, and then choose **Confirm and exit**
 
 * Profile
-    ....* Assuming that you'll wanting to use Hyprland to use my [dotfiles](README.md) you'll want to choose a **type** of **Desktop** and select **Hyprland**, **XFce4** and **KDE Plasma** from the list. (I use components from all 3)
-    ....* When asked about **Seat access**, choose **polkit**.
-    ....* Under **Graphics driver** choose the appropriate driver for the graphics chip you have in your computer.
-    ....* Under **Greeter** I use **ly** which is very minimal.  If you want something more graphical, leave the default of **sddm**.
+    * Assuming that you'll wanting to use Hyprland to use my [dotfiles](README.md) you'll want to choose a **type** of **Desktop** and select **Hyprland**, **XFce4** and **KDE Plasma** from the list. (I use components from all 3)
+    * When asked about **Seat access**, choose **polkit**.
+    * Under **Graphics driver** choose the appropriate driver for the graphics chip you have in your computer.
+    * Under **Greeter** I use **ly** which is very minimal.  If you want something more graphical, leave the default of **sddm**.
 
 * Applications
-    ....* No change (we install applications later)
+    * No change (we install applications later)
 
 * Network configuration
-    ....* If your network is working properly, you can just select **Copy ISO network configuration to installation**.  Otherwise, you may want a network manager - but you'll have to research which one and how to use it.
+    * If your network is working properly, you can just select **Copy ISO network configuration to installation**.  Otherwise, you may want a network manager - but you'll have to research which one and how to use it.
 
 * Additional packages
-    ....* No change
+    * No change
 
 * Timezone
-    ....* Choose the timezone you are in.
+    * Choose the timezone you are in.
 
 * Automatic time sync (NTP)
-    ....* No change.  We want it to be **Enabled** so that our computer's time is updated automatically from the internet.
+    * No change.  We want it to be **Enabled** so that our computer's time is updated automatically from the internet.
 
 Once the above is completed, you can now highlight **Install** and hit **ENTER**.  When asked if you'd like to continue, select **YES**
 
