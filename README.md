@@ -1,7 +1,6 @@
 # dotfiles
 
 ## Disclaimer
-----------
 
 These are my dotfiles that I've customized for my own use, and uploaded to GitHub to make my life easier when re-installing my system.
 
