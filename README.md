@@ -41,6 +41,10 @@ If you want to install these on an Arch/Hyprland system, you can must first use 
 4. Install required software.
 5. Ask you about optional software. (In order to ensure my config works for you, choose **YES** for **Google-Chrome**)
 
+**NOTE*: 
+    - If you are asked about **"Packages to CleanBuild"** or **"Diffs to Show"**, just hit enter.
+    - If you are asked if you want to **"Remove make dependancies after install"**, choose **y**
+
 Once the software has successfully installed, run the **restoreDotfiles.sh** script.  This will first backup your existing configuration files into **~/dotfiles/backup/**, and then copy the new configuration files to the appropriate directory.
 
 ** DO NOT REBOOT **
@@ -79,6 +83,28 @@ You must update some hyprland configuration files to ensure that everything work
 Once you've completed those steps, reboot to ensure that your monitors are working properly, and that waybar appears at the top of the screen.  Not all of waybar's functions may be working immediately.  I'll add a troubleshooting section for those below.
 
 **Note**: You may need to reorder your monitors in the **~/.config/hypr/hyprland.conf** file, if you find they are not in the correct order.
+
+#### Must Know Keyboard Shortcuts
+
+If this is your first time using Hyprland, you'll need to know a few keyboard shortcuts to be able to get around.  
+
+In the list below the **"Super"** key refers to what is typically the **"Windows"** key on your keyboard.
+
+**Super+q** = Open a terminal (Kitty)
+**Super+c** = Close selected window/application
+**Super+m** = Log out
+**Super+e** = File Manager (works only if you've also installed KDE Plasma and XFce4)
+**Super+v** = Toggle floating window (same key combo to switch it back)
+**Super+r** = Open app menu
+**Super+w** = Web Browser (Google Chrome, only once installed)
+**Super+PrtScr** = Screenshot current window
+**Shift+PrtScr** = Screenshot selection
+**Super+l** = Lock workstation
+**Super+p** = Show copy/paste clipboard
+**Super+1** = Switch to workspace 1 (use other numbers to switch to different monitors or create virtual workspaces)
+**Super+Shift+1** Move currently selected app to workspace 1. (use other numbers to switch app to different monitors or virtual workspaces)
+
+There are other keybinds that you can find in the **keybindings** section of the **~/.config/hypr/hyprland.conf** file, or you can modify/add your own.
 
 #### Troubleshooting Waybar Plugins
 

@@ -12,9 +12,11 @@ mkdir -p "$backup_location"
 
 # Back up wallpaper
 cp -R "$wallpaper_location" "$backup_location"
+echo "Successfully backed up $wallpaper_location"
 
 # Back up bashrc
 cp "$HOME/.bashrc" "$backup_location/bashrc"
+echo "Successfully backed up .bashrc"
 
 # Back up config directories using a loop
 configs=("hypr" "kitty" "nvim" "rofi" "kate" "swaync" "waybar")
