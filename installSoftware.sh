@@ -23,7 +23,7 @@ nerd-fonts-noto-sans-mono ttf-font-awesome ttf-cascadia-code-nerd \
 noto-fonts-emoji ttf-jetbrains-mono-nerd pavucontrol \
 libreoffice-fresh gimp vlc fastfetch \
 gwenview bluez bluetooth-manager \
-power-profiles-daemon rsync
+power-profiles-daemon rsync archlinux-xdg-menu
 
 # Function to handle conditional installs
 ask_install() {
