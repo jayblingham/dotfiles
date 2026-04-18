@@ -1,0 +1,19 @@
+[Unit]
+Description=Rclone FTP Mount
+After=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/rclone/ftp-secret.env
+ExecStartPre=-/usr/bin/fusermount3 -u /mnt/storage/billingham
+ExecStart=/usr/bin/rclone mount :ftp: /mnt/storage/billingham \
+    --ftp-host ftp.billingham.ca \
+    --ftp-user billing1 \
+    --ftp-pass ${FTP_PASS} \
+    --vfs-cache-mode writes
+ExecStop=/usr/bin/fusermount3 -u /mnt/storage/billingham
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -19,8 +19,7 @@ cp "$HOME/.bashrc" "$backup_location/bashrc"
 echo "Successfully backed up .bashrc"
 
 # Back up config directories using a loop
-configs=("hypr" "kitty" "nvim" "rofi" "kate" "swaync" "waybar")
-
+configs=("hypr" "kitty" "nvim" "rofi" "kate" "swaync" "waybar" "rclone")
 for folder in "${configs[@]}"; do
     if [ -d "$basedir/$folder" ]; then
         # --delete ensures your backup matches your actual config exactly
@@ -34,7 +33,7 @@ done
 cp "$dotfiles_location/bashrc/.bashrc" "$HOME/.bashrc"
 
 # 3. Restore config folders
-configs=("hypr" "kitty" "nvim" "rofi" "kate" "swaync" "waybar")
+configs=("hypr" "kitty" "nvim" "rofi" "kate" "swaync" "waybar" "rclone")
 
 for folder in "${configs[@]}"; do
     if [ -d "$dotfiles_location/$folder" ]; then
@@ -47,7 +46,32 @@ for folder in "${configs[@]}"; do
     fi
 done
 
+# 3a. Restore Systemd User Services
+# We handle this separately to ensure the path is correct for systemd
+if [ -d "$dotfiles_location/systemd/user" ]; then
+    mkdir -p "$HOME/.config/systemd/user"
+    rsync -a "$dotfiles_location/systemd/user/" "$HOME/.config/systemd/user/"
+    echo "Restored Systemd user services"
+fi
+
 # 4. Restore wallpaper
 if [ -d "$dotfiles_location/wallpaper" ]; then
     rsync -a "$dotfiles_location/wallpaper/" "$HOME/wallpaper/"
+fi
+
+# 5. Enable and Start the FTP Mount
+echo "--- Activating Services ---"
+if [ -f "$HOME/.config/systemd/user/rclone-ftp.service" ]; then
+    # Reload to ensure systemd sees the newly copied file
+    systemctl --user daemon-reload
+    
+    # Enable and start the service
+    # We check if the secret file exists first to avoid a failed status
+    if [ -f "$HOME/.config/rclone/ftp-secret.env" ]; then
+        systemctl --user enable --now rclone-ftp.service
+        echo "rclone FTP mount activated."
+    else
+        echo "Note: ftp-secret.env not found. Service restored but not started."
+        echo "Please run your installation script or create the .env file manually."
+    fi
 fi

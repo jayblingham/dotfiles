@@ -23,7 +23,7 @@ nerd-fonts-noto-sans-mono ttf-font-awesome ttf-cascadia-code-nerd \
 noto-fonts-emoji ttf-jetbrains-mono-nerd pavucontrol \
 libreoffice-fresh gimp vlc fastfetch \
 gwenview bluez bluetooth-manager \
-power-profiles-daemon rsync archlinux-xdg-menu
+power-profiles-daemon rsync rclone fuse3 archlinux-xdg-menu
 
 # Function to handle conditional installs
 ask_install() {
@@ -69,5 +69,28 @@ ask_install "Do you want to install Microsoft Edge?" "microsoft-edge-stable-bin"
 
 # Will you be using a webcam?
 ask_install "Will you be using a webcam?" "webcamize"
+
+# Setup FTP Secret for rclone
+echo "Would you like to set up the FTP password for Neovim/rclone?"
+read -p "(y/n): " setup_ftp
+
+if [[ "$setup_ftp" =~ ^[Yy]$ ]]; then
+    # Create the directory if it doesn't exist
+    mkdir -p "$HOME/.config/rclone"
+    
+    # Prompt for password (s flag hides input as you type for security)
+    read -sp "Enter the FTP password for devupload: " ftp_pass
+    echo "" # Add a newline after the hidden input
+    
+    # Create the .env file
+    echo "FTP_PASS=$ftp_pass" > "$HOME/.config/rclone/ftp-secret.env"
+    
+    # Set secure permissions (read/write for you only)
+    chmod 600 "$HOME/.config/rclone/ftp-secret.env"
+    
+    echo "FTP secret file created successfully at ~/.config/rclone/ftp-secret.env"
+else
+    echo "Skipping FTP secret setup."
+fi
 
 echo "--- Installation Complete! ---"
