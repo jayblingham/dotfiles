@@ -29,7 +29,7 @@ Once git is installed, you can clone the repo using the following commands.
     ```
 You are now ready to contiue with the installation.
 
-## Installation
+## Software Installation
 
 If you want to install these on an Arch/Hyprland system, you must first use the **installSoftware.sh** script located in the **~/dotfiles/** directory.
 
