@@ -23,7 +23,8 @@ nerd-fonts-noto-sans-mono ttf-font-awesome ttf-cascadia-code-nerd \
 noto-fonts-emoji ttf-jetbrains-mono-nerd pavucontrol \
 libreoffice-fresh gimp vlc fastfetch \
 gwenview bluez bluetooth-manager \
-power-profiles-daemon rsync rclone fuse3 archlinux-xdg-menu
+power-profiles-daemon rsync rclone fuse3 archlinux-xdg-menu \
+ruby unzip nodejs npm
 
 # Function to handle conditional installs
 ask_install() {
@@ -69,6 +70,27 @@ ask_install "Do you want to install Microsoft Edge?" "microsoft-edge-stable-bin"
 
 # Will you be using a webcam?
 ask_install "Will you be using a webcam?" "webcamize"
+
+# --- Prepare Mount Point ---
+echo "Checking mount point directory..."
+MOUNT_PATH="/mnt/storage/billingham"
+
+# Create the path if it doesn't exist
+if [ ! -d "$MOUNT_PATH" ]; then
+    echo "Creating mount directory $MOUNT_PATH..."
+    sudo mkdir -p "$MOUNT_PATH"
+fi
+
+# Ensure Jay owns it so rclone can write to it
+# We check ownership first to avoid unnecessary sudo hits
+CURRENT_OWNER=$(stat -c '%U:%G' "$MOUNT_PATH")
+if [ "$CURRENT_OWNER" != "jay:jay" ]; then
+    echo "Correcting ownership of $MOUNT_PATH to jay:jay..."
+    sudo chown jay:jay "$MOUNT_PATH"
+fi
+
+# Ensure permissions are correct (rwxr-xr-x)
+sudo chmod 755 "$MOUNT_PATH"
 
 # Setup FTP Secret for rclone
 echo "Would you like to set up the FTP password for Neovim/rclone?"

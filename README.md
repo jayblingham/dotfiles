@@ -31,7 +31,7 @@ You are now ready to contiue with the installation.
 
 ## Installation
 
-If you want to install these on an Arch/Hyprland system, you can must first use the **installSoftware.sh** script located in the **~/dotfiles/** directory.
+If you want to install these on an Arch/Hyprland system, you must first use the **installSoftware.sh** script located in the **~/dotfiles/** directory.
 
 #### This will perform the following actions:
 
@@ -44,6 +44,8 @@ If you want to install these on an Arch/Hyprland system, you can must first use 
 **NOTE*: 
     - If you are asked about **"Packages to CleanBuild"** or **"Diffs to Show"**, just hit enter.
     - If you are asked if you want to **"Remove make dependancies after install"**, choose **y**
+
+## Install the dotfiles
 
 Once the software has successfully installed, run the **restoreDotfiles.sh** script.  This will first backup your existing configuration files into **~/dotfiles/backup/**, and then copy the new configuration files to the appropriate directory.
 
