@@ -7,6 +7,7 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias ssh='kitty +kitten ssh'
 PS1='[\u@\h \W]\$ '
 export PS1="\[\e[32m\]|\[\e[m\]\[\e[32m\]-\[\e[m\]\[\e[32m\][\[\e[m\]\[\e[34m\]\u\[\e[m\]🐧\[\e[34m\]\h\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32m\]-\[\e[m\]\[\e[32m\][\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[32m\]]\[\e[32m\]-\[\e[32m\]|\[\e[m\]\[\e[32m\]:\[\e[m\] "
 clear

@@ -24,7 +24,7 @@ noto-fonts-emoji ttf-jetbrains-mono-nerd pavucontrol \
 libreoffice-fresh gimp vlc fastfetch \
 gwenview bluez bluetooth-manager \
 power-profiles-daemon rsync rclone fuse3 archlinux-xdg-menu \
-ruby unzip nodejs npm
+ruby unzip nodejs npm neovim
 
 # Function to handle conditional installs
 ask_install() {
